@@ -12,3 +12,10 @@
 * repository - mock database
 * resolver - query
 
+## Run
+
+```
+gradle appRun
+```
+
+http://localhost:8080/GraphQLxSpringMVC/graphql
