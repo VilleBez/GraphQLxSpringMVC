@@ -2,53 +2,50 @@ package idv.villebez.model.resp;
 
 import java.util.List;
 
+import org.springframework.context.ApplicationContext;
+
+import idv.villebez.ApplicationContextProvider;
 import idv.villebez.model.Basic;
 import idv.villebez.model.Education;
 import idv.villebez.model.Experience;
+import idv.villebez.repository.BasicRepository;
+import idv.villebez.repository.EducationRepository;
+import idv.villebez.repository.ExperienceRepository;
 
 public class Profile {
-	Basic basic;
-	List<Experience> experience;
-	List<Education> education;
+	private BasicRepository basicRepository;
+	private EducationRepository educationRepository;
+	private ExperienceRepository experienceRepository;
+	
+	Long pid;
 
-	public Basic getBasic() {
-		return basic;
+	public Profile(long pid) {
+		this.pid = pid;
+		
+		ApplicationContext context = ApplicationContextProvider.getApplicationContext();
+		basicRepository = context.getBean(BasicRepository.class, "basicRepository");
+		educationRepository = context.getBean(EducationRepository.class, "educationRepository");
+		experienceRepository = context.getBean(ExperienceRepository.class, "experienceRepository");
 	}
 
-	public void setBasic(Basic basic) {
-		this.basic = basic;
+	public Basic getBasic() {
+		return basicRepository.findById(pid);
 	}
 
 	public List<Experience> getAllExperience() {
-		return experience;
+		return experienceRepository.findByPid(pid);
 	}
 
-	public List<Experience> getExperience(int first) {
-		return experience.subList(0, first);
-	}
-
-	public List<Experience> getExperience() {
-		return experience;
-	}
-
-	public void setExperience(List<Experience> experience) {
-		this.experience = experience;
+	public List<Experience> getExperience(int limit) {
+		return getAllExperience().subList(0, limit);
 	}
 
 	public List<Education> getAllEducation() {
-		return education;
+		return educationRepository.findByPid(pid);
 	}
 
-	public List<Education> getEducation(int first) {
-		return education.subList(0, first);
-	}
-
-	public List<Education> getEducation() {
-		return education;
-	}
-
-	public void setEducation(List<Education> education) {
-		this.education = education;
+	public List<Education> getEducation(int limit) {
+		return getAllEducation().subList(0, limit);
 	}
 
 }

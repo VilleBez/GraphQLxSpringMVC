@@ -1,9 +1,9 @@
 type Profile {
 	basic: Basic
 	allExperience: [Experience]!
-	experience(first: Int): [Experience]!
+	experience(limit: Int): [Experience]!
 	allEducation: [Education]!
-	education(first: Int): [Education]!
+	education(limi: Int): [Education]!
 }
 
 type Basic{
@@ -47,6 +47,5 @@ type Education {
 
 type Query {
   Profile(id: ID!): Profile
-  Profiles(ids: [ID]): [Profile]
 }
 
