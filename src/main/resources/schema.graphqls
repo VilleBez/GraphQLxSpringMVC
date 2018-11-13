@@ -1,0 +1,52 @@
+type Profile {
+	basic: Basic
+	allExperience: [Experience]!
+	experience(first: Int): [Experience]!
+	allEducation: [Education]!
+	education(first: Int): [Education]!
+}
+
+type Basic{
+	id: ID!
+	createDate: Long!
+	updateDate: Long!
+	userName: String! 
+	introduction: String
+}
+
+type Experience {
+	id: ID!
+	createDate: Long!
+	updateDate: Long!
+	pid: Long!
+	companyName: String
+	jobName: String
+	startYear: Int
+	startMonth: Int
+	endYear: Int
+	endMonth: Int
+	status: Int
+	location: String
+	description: String
+}
+
+type Education {
+	id: ID!
+	createDate: Long!
+	updateDate: Long!
+	 pid: Long!
+	 schoolName: String
+	 majorName: String
+	 degree: Int
+	 location: String
+	 startYear: Int
+	 startMonth: Int
+	 endYear: Int
+	 endMonth: Int
+}
+
+type Query {
+  Profile(id: ID!): Profile
+  Profiles(ids: [ID]): [Profile]
+}
+
