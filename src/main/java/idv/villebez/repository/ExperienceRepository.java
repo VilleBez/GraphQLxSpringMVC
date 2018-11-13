@@ -13,7 +13,7 @@ public class ExperienceRepository extends GenericRepo<Long, Experience> {
     public ExperienceRepository() {
     		Experience exp = new Experience();
     		exp.setId(RandomUtils.nextLong());
-    		exp.setPid(108199l);
+    		exp.setPid(123456l);
     		exp.setCompanyName("壹零肆資訊科技公司");
     		exp.setDescription("Ctrl + C and Ctrl + V");
     		exp.setJobName("計算機語言學家");
@@ -22,13 +22,12 @@ public class ExperienceRepository extends GenericRepo<Long, Experience> {
     		exp.setEndYear(2018);
     		exp.setEndMonth(12);
     		exp.setLocation("新店");
-    		exp.setStatus(1);
         
         this.save(exp);
         
         exp = new Experience();
         exp.setId(RandomUtils.nextLong());
-        exp.setPid(108199l);
+        exp.setPid(123456l);
 		exp.setCompanyName("台灣積體電路");
 		exp.setDescription("阿雞阿雞阿雞");
 		exp.setJobName("計算機學家");
@@ -37,12 +36,11 @@ public class ExperienceRepository extends GenericRepo<Long, Experience> {
 		exp.setEndYear(2015);
 		exp.setEndMonth(4);
 		exp.setLocation("台灣");
-		exp.setStatus(1);
 		this.save(exp);
 		
 		exp = new Experience();
 		exp.setId(RandomUtils.nextLong());
-        exp.setPid(100604l);
+        exp.setPid(999999l);
 		exp.setCompanyName("XXXX");
 		exp.setDescription("OOOO");
 		exp.setJobName("OX 科學家");
@@ -51,7 +49,6 @@ public class ExperienceRepository extends GenericRepo<Long, Experience> {
 		exp.setEndYear(2018);
 		exp.setEndMonth(4);
 		exp.setLocation("宇宙");
-		exp.setStatus(1);
 		this.save(exp);
     }
     

@@ -9,7 +9,6 @@ public class Experience extends GenericID<Long> {
 	Integer startMonth;
 	Integer endYear;
 	Integer endMonth;
-	Integer status;
 	String location;
 	String description;
 
@@ -67,14 +66,6 @@ public class Experience extends GenericID<Long> {
 
 	public void setEndMonth(Integer endMonth) {
 		this.endMonth = endMonth;
-	}
-
-	public Integer getStatus() {
-		return status;
-	}
-
-	public void setStatus(Integer status) {
-		this.status = status;
 	}
 
 	public String getLocation() {

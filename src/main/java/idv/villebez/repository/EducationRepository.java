@@ -13,7 +13,7 @@ public class EducationRepository extends GenericRepo<Long, Education> {
     public EducationRepository() {
     		Education edu = new Education();
     		edu.setId(RandomUtils.nextLong());
-    		edu.setPid(108199l);
+    		edu.setPid(123456l);
     		edu.setSchoolName("私立壹零肆科技大學");
     		edu.setMajorName("人力暨職涯發展學系");
     		edu.setLocation("新店");
@@ -27,7 +27,7 @@ public class EducationRepository extends GenericRepo<Long, Education> {
     		
     		edu = new Education();
     		edu.setId(RandomUtils.nextLong());
-    		edu.setPid(108199l);
+    		edu.setPid(123456l);
     		edu.setSchoolName("台灣大學");
     		edu.setMajorName("社會學系");
     		edu.setLocation("公館");
@@ -41,7 +41,7 @@ public class EducationRepository extends GenericRepo<Long, Education> {
     		
     		edu = new Education();
     		edu.setId(RandomUtils.nextLong());
-    		edu.setPid(100604l);
+    		edu.setPid(999999l);
     		edu.setSchoolName("OXX 大學");
     		edu.setMajorName("XO 學系");
     		edu.setLocation("地球");

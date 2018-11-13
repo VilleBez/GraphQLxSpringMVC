@@ -25,7 +25,6 @@ type Experience {
 	startMonth: Int
 	endYear: Int
 	endMonth: Int
-	status: Int
 	location: String
 	description: String
 }
@@ -46,6 +45,6 @@ type Education {
 }
 
 type Query {
-  Profile(id: ID!): Profile
+  Profile(pid: ID!): Profile
 }
 
