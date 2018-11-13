@@ -7,8 +7,8 @@
 
 ## Package
 
-* controller 
+* controller - /graphql endpoint
 * model
-* repository - mock d
-* resolver
+* repository - mock database
+* resolver - query
 
